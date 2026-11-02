@@ -1,4 +1,4 @@
-"""02. 전처리: 기간 필터, 금액 정리, 이상치 표시, 중복 표시, 주소 표준화 (CLAUDE.md 4.2의 1~5단계).
+"""02. 전처리: 기간 필터, 금액 정리, 이상치 표시, 중복 표시, 주소 표준화 (analysis_plan.md 4.2의 1~5단계).
 
 입력: data/raw/apt_rent_*.csv
 출력: data/interim/rent_clean.parquet

@@ -1,4 +1,4 @@
-"""06. 지표 C: 상대 누적 상승률 RG (CLAUDE.md 3.2).
+"""06. 지표 C: 상대 누적 상승률 RG (analysis_plan.md 3.2).
 
 g_c,t = ln(P_c,t,2년차 / P_c,t,1년차)   c: 단지(aptSeq) × 전용면적(area_r) 묶음
 g_i,t = median_{c ∈ i} g_c,t,          RG_i = g_i,후 − g_i,전

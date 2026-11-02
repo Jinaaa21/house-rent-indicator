@@ -1,4 +1,4 @@
-"""04. 행정동 결합: 단지 좌표(aptSeq) × 행정동 경계 point-in-polygon (CLAUDE.md 4.2의 7단계).
+"""04. 행정동 결합: 단지 좌표(aptSeq) × 행정동 경계 point-in-polygon (analysis_plan.md 4.2의 7단계).
 
 입력: data/interim/complex_coords.csv, data/interim/rent_clean.parquet, config.ADMDONG_FILE
 출력: data/interim/rent_admdong.parquet        계약 + 행정동
@@ -41,7 +41,7 @@ def log_rows(df: pd.DataFrame, step: str, rule: str, flagged=None) -> dict:
 
 
 def lq_by_dong(rent: pd.DataFrame, dong_col: str) -> pd.DataFrame:
-    """행정동·기간별 LQ (CLAUDE.md 3.1). invalid_rent 제외."""
+    """행정동·기간별 LQ (analysis_plan.md 3.1). invalid_rent 제외."""
     r = rent[~rent["invalid_rent"]]
     g = r.groupby([dong_col, "period"]).agg(N=("rent_type", "size"),
                                              M=("rent_type", lambda s: (s == "월세 포함").sum())).reset_index()

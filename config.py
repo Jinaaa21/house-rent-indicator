@@ -1,4 +1,4 @@
-"""분석 설정값 (CLAUDE.md 기준). 값을 바꾸면 보고서 전처리 절에도 반영할 것."""
+"""분석 설정값 (analysis_plan.md 기준). 값을 바꾸면 보고서 전처리 절에도 반영할 것."""
 from pathlib import Path
 
 # ── 경로 ─────────────────────────────────────────────
@@ -10,7 +10,7 @@ OUT_FIG = ROOT / "outputs" / "figures"
 OUT_TAB = ROOT / "outputs" / "tables"
 LOG_DIR = ROOT / "logs"
 
-# ── 비교 기간 (CLAUDE.md 2장, 확정) ───────────────────
+# ── 비교 기간 (analysis_plan.md 2장, 확정) ───────────────────
 PERIODS = {
     "pre": ("2018-08-01", "2020-07-31"),   # 시행 전
     "post": ("2022-08-01", "2024-07-31"),  # 시행 후
@@ -20,7 +20,7 @@ GAP_PERIOD = ("2020-08-01", "2022-07-31")
 LAW_DATE = "2020-07-31"        # 임대차 2법 시행
 REPORTING_DATE = "2021-06-01"  # 전월세신고제 시행
 
-# ── 최소 건수·전처리 기준 (CLAUDE.md 3~4장, 잠정) ─────
+# ── 최소 건수·전처리 기준 (analysis_plan.md 3~4장, 잠정) ─────
 MIN_N_LQ = 30        # 지표 A: 각 기간 행정동 계약 수
 MIN_CELLS_RG = 5     # 지표 C: 행정동별 매칭 묶음 수
 MIN_N_RENEW = 20     # 갱신요구권: 행정동별 갱신 계약 수
@@ -30,11 +30,11 @@ TRIM_PCT = 0.01      # ㎡당 보증금 상하위 절사 비율(기간별)
 TRIM_SCOPE = "jeonse"
 AREA_ROUND = 1       # 전용면적 반올림 단위(㎡)
 MIN_AREA = None      # 전용면적 극소형 제외 기준(㎡). 기본 분석은 적용하지 않음
-SMALL_AREA = 20      # 민감도 점검(CLAUDE.md 5.5)용 소형 기준(㎡)
+SMALL_AREA = 20      # 민감도 점검(analysis_plan.md 5.5)용 소형 기준(㎡)
 
 # 완전 중복 행: "keep" = 지우지 않음(기본). 동·호가 없어 서로 다른 계약인지 구별 불가
 DEDUP_MODE = "keep"
-DEDUP_ROBUSTNESS = True  # 중복 제거 버전으로 ΔLQ·R 재계산해 비교(CLAUDE.md 4.4)
+DEDUP_ROBUSTNESS = True  # 중복 제거 버전으로 ΔLQ·R 재계산해 비교(analysis_plan.md 4.4)
 
 # 기존 단지: 준공연도 ≤ 2017 (지표 A의 dLQ_exist, 진단의 기존 단지 기준)
 EXIST_MAX_BUILD_YEAR = 2017

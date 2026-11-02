@@ -1,0 +1,20 @@
+# 원자료·중간 산출물 (커밋 금지)
+data/raw/*
+data/interim/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+
+# API 키
+.env
+
+# 수집 로그
+logs/*
+!logs/.gitkeep
+
+__pycache__/
+.ipynb_checkpoints/
+
+# 작업용 문서(수정안 미리보기, 이전 초안, 화면 캡처): 올리지 않음
+docs/revision_preview_*.html
+docs/report_draft_v*.html
+docs/screens/
